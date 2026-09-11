@@ -1,0 +1,23 @@
+entry_id,transaction_id,date,record_type,entity,counterparty,account,entry_role,economic_class,unit,cash_change,asset_change,liability_change,direct_demand_category,note,consolidation_value
+E-D0-AUTOMATION-P,E-D0-AUTOMATION,0,cash,exposed_households_H,owners_S,cash,payer,automation_income_shift,date-0 goods at P0=P1=1,-20.0,0.0,0.0,,Conditional liquid-income displacement,-20.0
+E-D0-AUTOMATION-R,E-D0-AUTOMATION,0,cash,owners_S,exposed_households_H,cash,receiver,automation_income_shift,date-0 goods at P0=P1=1,20.0,0.0,0.0,,Conditional liquid-income displacement,20.0
+E-D0-TAX-P,E-D0-TAX,0,cash,owners_S,treasury,cash,payer,automation_receipts,date-0 goods at P0=P1=1,-20.0,0.0,0.0,,Tax on the legally covered and compliant automation-income base,-20.0
+E-D0-TAX-R,E-D0-TAX,0,cash,treasury,owners_S,cash,receiver,automation_receipts,date-0 goods at P0=P1=1,20.0,0.0,0.0,,Tax on the legally covered and compliant automation-income base,20.0
+E-D0-TRANSFER-P,E-D0-TRANSFER,0,cash,treasury,exposed_households_H,cash,payer,public_transfer,date-0 goods at P0=P1=1,-12.0,0.0,0.0,,Transfer to the high-MPC exposed group,-12.0
+E-D0-TRANSFER-R,E-D0-TRANSFER,0,cash,exposed_households_H,treasury,cash,receiver,public_transfer,date-0 goods at P0=P1=1,12.0,0.0,0.0,,Transfer to the high-MPC exposed group,12.0
+E-D0-ADMIN-P,E-D0-ADMIN,0,cash,treasury,administrative_supplier,cash,payer,public_purchase,date-0 goods at P0=P1=1,-1.0,0.0,0.0,,Administration purchased once,-1.0
+E-D0-ADMIN-R,E-D0-ADMIN,0,cash,administrative_supplier,treasury,cash,receiver,public_purchase,date-0 goods at P0=P1=1,1.0,0.0,0.0,administration,Administration purchased once,1.0
+E-D0-INVESTMENT-P,E-D0-INVESTMENT,0,cash,treasury,capital_goods_supplier,cash,payer,public_investment,date-0 goods at P0=P1=1,-3.0,0.0,0.0,,Capacity investment purchased once,-3.0
+E-D0-INVESTMENT-R,E-D0-INVESTMENT,0,cash,capital_goods_supplier,treasury,cash,receiver,public_investment,date-0 goods at P0=P1=1,3.0,0.0,0.0,capacity_investment,Capacity investment purchased once,3.0
+E-D0-RESERVE-P,E-D0-RESERVE,0,cash,treasury,depository,cash,payer,financial_deposit,date-0 goods at P0=P1=1,-4.0,0.0,0.0,,Earmarked reserve; not date-0 current demand,-4.0
+E-D0-RESERVE-R,E-D0-RESERVE,0,cash,depository,treasury,cash,receiver,financial_deposit,date-0 goods at P0=P1=1,4.0,0.0,0.0,,Earmarked reserve; not date-0 current demand,4.0
+E-D0-UNUSED-P,E-D0-UNUSED,0,cash,treasury,depository,cash,payer,financial_deposit,date-0 goods at P0=P1=1,-0.0,0.0,0.0,,Unallocated public balance; not current demand,-0.0
+E-D0-UNUSED-R,E-D0-UNUSED,0,cash,depository,treasury,cash,receiver,financial_deposit,date-0 goods at P0=P1=1,0.0,0.0,0.0,,Unallocated public balance; not current demand,0.0
+E-D0-RESERVE-POSITION-A,E-D0-RESERVE-POSITION,0,balance_sheet,public_sector,depository,earmarked_reserve_asset,asset,deposit_position,date-0 goods at P0=P1=1,0.0,4.0,0.0,,Public deposit asset and matching issuer liability,4.0
+E-D0-RESERVE-POSITION-L,E-D0-RESERVE-POSITION,0,balance_sheet,depository,public_sector,earmarked_reserve_liability,liability,deposit_position,date-0 goods at P0=P1=1,0.0,0.0,4.0,,Public deposit asset and matching issuer liability,-4.0
+E-D0-UNUSED-POSITION-A,E-D0-UNUSED-POSITION,0,balance_sheet,public_sector,depository,unused_balance_asset,asset,deposit_position,date-0 goods at P0=P1=1,0.0,0.0,0.0,,Unused public deposit and matching issuer liability,0.0
+E-D0-UNUSED-POSITION-L,E-D0-UNUSED-POSITION,0,balance_sheet,depository,public_sector,unused_balance_liability,liability,deposit_position,date-0 goods at P0=P1=1,0.0,0.0,0.0,,Unused public deposit and matching issuer liability,0.0
+E-D1-OPERATION-P,E-D1-OPERATION,1,cash,depository,operating_input_supplier,cash,payer,public_purchase,date-0 goods at P0=P1=1,-4.0,0.0,0.0,,Operating input purchased once at date 1,-4.0
+E-D1-OPERATION-R,E-D1-OPERATION,1,cash,operating_input_supplier,depository,cash,receiver,public_purchase,date-0 goods at P0=P1=1,4.0,0.0,0.0,future_operation,Operating input purchased once at date 1,4.0
+E-D1-RESERVE-REDEMPTION-A,E-D1-RESERVE-REDEMPTION,1,balance_sheet,public_sector,depository,earmarked_reserve_asset,asset,deposit_position,date-0 goods at P0=P1=1,0.0,-4.0,0.0,,Reserve asset and deposit liability are redeemed together,-4.0
+E-D1-RESERVE-REDEMPTION-L,E-D1-RESERVE-REDEMPTION,1,balance_sheet,depository,public_sector,earmarked_reserve_liability,liability,deposit_position,date-0 goods at P0=P1=1,0.0,0.0,-4.0,,Reserve asset and deposit liability are redeemed together,4.0

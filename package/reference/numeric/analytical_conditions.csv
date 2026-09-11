@@ -1,0 +1,5 @@
+capacity_case,phi,target_case,s_required,X_min,q_required,I_min,B_min,fixed_transfer,minimum_date0_finance,available_net_resources,fiscally_feasible
+high,0.25,positive_feasible_target,4.0,4.0,0.8,2.92,4.0,0.0,6.92,19.0,True
+high,0.25,positive_feasible_target,4.0,4.0,0.8,2.92,4.0,12.0,18.92,19.0,True
+low,0.08,positive_feasible_target,4.0,4.0,0.8,9.125,4.0,0.0,13.125,19.0,True
+low,0.08,positive_feasible_target,4.0,4.0,0.8,9.125,4.0,12.0,25.125,19.0,False

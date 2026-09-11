@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "package_name": "automation-institutions-reproducibility",
+  "package_version": "0.1.2",
+  "manuscript_version": "v22",
+  "example_source_version": "v4",
+  "parameter_set_id": "synthetic-benchmark-v4",
+  "scope": "incidence and direct demand; not equilibrium output",
+  "implemented_through": "local reproducibility distribution",
+  "remote_ci_execution": "not_run",
+  "distribution_status": "local distribution interface implemented; execution evidence accompanies the archive"
+}

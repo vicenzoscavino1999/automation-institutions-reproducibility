@@ -1,0 +1,13 @@
+{
+  "software_version": "0.1.2",
+  "public_repository": "not_published",
+  "remote_ci": "not_run",
+  "zenodo": {
+    "state": "unpublished_draft",
+    "reserved_doi": "10.5281/zenodo.22712835",
+    "record_id": "22712835"
+  },
+  "doi_registered": false,
+  "license": "existing_rights_reserved; author_decision_pending",
+  "zip_sha256": "78c749cbfcbb05b65e3335ac1ea27e201859992dacb9f0f5a2de348f2c5aff33"
+}

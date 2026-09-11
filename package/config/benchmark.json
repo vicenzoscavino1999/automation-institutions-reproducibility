@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "parameter_set_id": "synthetic-benchmark-v4",
+  "parameters": {
+    "omega_h": 0.8,
+    "omega_s": 0.2,
+    "income_h_0": 80.0,
+    "income_s_0": 20.0,
+    "consumption_h_0": 72.0,
+    "consumption_s_0": 8.0,
+    "assets_h_0": 10.0,
+    "assets_s_0": 90.0,
+    "m_h": 0.9,
+    "m_s": 0.3,
+    "z": 20.0,
+    "p_0": 1.0,
+    "p_1": 1.0,
+    "d_admin": 1.0,
+    "d_investment": 1.0,
+    "d_operation": 1.0,
+    "reserve_return": 1.0,
+    "q_0": 0.1,
+    "delta_q": 0.1,
+    "damage_q": 0.02,
+    "phi_high": 0.25,
+    "phi_low": 0.08,
+    "a_operation": 1.0,
+    "b_capacity": 5.0,
+    "rho_o": 1.0,
+    "opportunity_0": 1.0,
+    "opportunity_min": 5.0
+  },
+  "generation": {
+    "constructive_environment": {
+      "name": "E",
+      "description": "Scenario C allocation in a lower-MPC synthetic environment",
+      "base_policy": "C",
+      "m_h": 0.45
+    },
+    "fixed_allocation": {
+      "fiscal": {
+        "tax_rate": 1.0,
+        "legal_coverage": 1.0,
+        "compliance": 1.0
+      },
+      "admin_cost": 1.0,
+      "transfer_h": 12.0,
+      "investment_q": 3.0,
+      "reserve_b0": 4.0,
+      "operation_x1": 4.0,
+      "reserve_b1": 0.0,
+      "unused_u0": 0.0
+    },
+    "analytical": {
+      "capacity_cases": ["high", "low"],
+      "fixed_transfers": [0.0, 12.0],
+      "available_net_resources": 19.0
+    },
+    "conditional_region_grid": {
+      "m_h_start": 0.31,
+      "m_h_stop": 0.95,
+      "m_h_count": 65,
+      "phi_start": 0.04,
+      "phi_stop": 0.35,
+      "phi_count": 63
+    },
+    "sweeps": {
+      "collection": {
+        "admin_shares": [0.0, 0.05, 0.1],
+        "legal_coverage": 1.0,
+        "compliance": 1.0,
+        "tax_rate": {"start": 0.0, "stop": 1.0, "count": 51}
+      },
+      "administration": {
+        "start": 0.0,
+        "stop": 5.0,
+        "count": 51,
+        "tax_rate": 1.0,
+        "legal_coverage": 1.0,
+        "compliance": 1.0
+      },
+      "mpc_joint_gate": {
+        "m_h_start": 0.4,
+        "m_h_stop": 0.95,
+        "m_h_count": 56,
+        "m_s_start": 0.1,
+        "m_s_stop": 0.5,
+        "m_s_count": 41,
+        "tax_rate": 1.0,
+        "legal_coverage": 1.0,
+        "compliance": 1.0,
+        "admin_cost": 1.0
+      },
+      "capacity": {"start": 0.04, "stop": 0.35, "count": 125},
+      "depreciation": {"start": 0.0, "stop": 0.5, "count": 101},
+      "opportunity_target": {
+        "start_offset": 0.0,
+        "stop_offset_from_ceiling": 0.5,
+        "count": 56
+      }
+    }
+  }
+}
+

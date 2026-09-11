@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "name": "A",
+      "description": "Automation without a public response",
+      "fiscal": {"tax_rate": 0.0, "legal_coverage": 1.0, "compliance": 1.0},
+      "admin_cost": 0.0,
+      "transfer_h": 0.0,
+      "investment_q": 0.0,
+      "reserve_b0": 0.0,
+      "operation_x1": 0.0,
+      "reserve_b1": 0.0,
+      "unused_u0": 0.0,
+      "phi": 0.25
+    },
+    {
+      "name": "B",
+      "description": "Net receipts transferred to exposed households",
+      "fiscal": {"tax_rate": 1.0, "legal_coverage": 1.0, "compliance": 1.0},
+      "admin_cost": 1.0,
+      "transfer_h": 19.0,
+      "investment_q": 0.0,
+      "reserve_b0": 0.0,
+      "operation_x1": 0.0,
+      "reserve_b1": 0.0,
+      "unused_u0": 0.0,
+      "phi": 0.25
+    },
+    {
+      "name": "C",
+      "description": "Transfer, investment, and future operation; high capacity",
+      "fiscal": {"tax_rate": 1.0, "legal_coverage": 1.0, "compliance": 1.0},
+      "admin_cost": 1.0,
+      "transfer_h": 12.0,
+      "investment_q": 3.0,
+      "reserve_b0": 4.0,
+      "operation_x1": 4.0,
+      "reserve_b1": 0.0,
+      "unused_u0": 0.0,
+      "phi": 0.25
+    },
+    {
+      "name": "D",
+      "description": "Same fiscal uses as C; low conversion capacity",
+      "fiscal": {"tax_rate": 1.0, "legal_coverage": 1.0, "compliance": 1.0},
+      "admin_cost": 1.0,
+      "transfer_h": 12.0,
+      "investment_q": 3.0,
+      "reserve_b0": 4.0,
+      "operation_x1": 4.0,
+      "reserve_b1": 0.0,
+      "unused_u0": 0.0,
+      "phi": 0.08
+    }
+  ]
+}
+

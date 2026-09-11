@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "manuscript_version": "v22",
+  "manuscript_sha256": "7c568608c9096efb9ccbc40416d171bd631d796daa06e38607eacb6988623d6e",
+  "identifier_rule": "LaTeX labels are primary; the two unlabeled optimization displays use unique text anchors.",
+  "claims": [
+    {
+      "id": "worked_capture",
+      "kind": "formula",
+      "latex_label": "eq:worked_capture_app",
+      "magnitude": "gross public receipts and capture fraction",
+      "unit": "date-0 goods and shares",
+      "scenario": "all; benchmark source row C",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["tax_rate_tau","legal_coverage_lambda","compliance_chi","kappa_gross","T"]}],
+      "required_tex": ["T=\\tau\\chi_{\\mathrm{comp}}B_{\\mathrm{legal}}", "\\kappa_{\\mathrm{gross}}", "\\tau\\lambda_{\\mathrm{legal}}\\chi_{\\mathrm{comp}}"]
+    },
+    {
+      "id": "worked_public_budget",
+      "kind": "formula",
+      "latex_label": "eq:worked_public_budget_app",
+      "magnitude": "public date-0 budget",
+      "unit": "date-0 goods",
+      "scenario": "all; benchmark source row C",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["T","C_adm","y_T","I_q","B_0"]}],
+      "required_tex": ["T&=C_{\\mathrm{adm}}+y_T+I_q+B_0+U_0"]
+    },
+    {
+      "id": "worked_reserve_budget",
+      "kind": "formula",
+      "latex_label": "eq:worked_reserve_budget_app",
+      "magnitude": "reserve funding and future operation",
+      "unit": "date-0/date-1 goods at normalized prices",
+      "scenario": "all; benchmark source row C",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["B_0","X_1"]}],
+      "required_tex": ["R_BB_0&=X_1+B_1"]
+    },
+    {
+      "id": "worked_households",
+      "kind": "formula",
+      "latex_label": "eq:worked_households_app",
+      "magnitude": "household consumption, saving and liquid assets",
+      "unit": "date-0 goods",
+      "scenario": "all; benchmark source rows m_H and m_S",
+      "printed_precision": "symbolic_exact",
+      "sources": [
+        {"file":"results/parameters.csv","key":{"symbol":"m_H=m_T"},"fields":["value","unit"]},
+        {"file":"results/parameters.csv","key":{"symbol":"m_S"},"fields":["value","unit"]}
+      ],
+      "required_tex": ["C_H&=C_{H0}+m_H(-Z+y_T)", "C_S&=C_{S0}+m_S(Z-T)"]
+    },
+    {
+      "id": "worked_direct_demand",
+      "kind": "formula",
+      "latex_label": "eq:worked_direct_demand_app",
+      "magnitude": "change in first-round direct demand",
+      "unit": "date-0 goods at P0=P1=1",
+      "scenario": "all; benchmark source row C",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["delta_D0_dir"]}],
+      "required_tex": ["\\Delta D_0^{\\mathrm{dir}}", "+d_{\\mathrm{adm}}C_{\\mathrm{adm}}+d_II_q"]
+    },
+    {
+      "id": "worked_capacity",
+      "kind": "formula",
+      "latex_label": "eq:worked_capacity_app",
+      "magnitude": "projected institutional capacity",
+      "unit": "capacity index [0,1]",
+      "scenario": "all; benchmark source row C",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["phi","I_q","q_1"]}],
+      "required_tex": ["q_1&=\\Pi_{[0,1]}", "+\\phi I_q"]
+    },
+    {
+      "id": "worked_opportunity",
+      "kind": "formula",
+      "latex_label": "eq:worked_opportunity_app",
+      "magnitude": "effective service and opportunity",
+      "unit": "service and opportunity index",
+      "scenario": "all; benchmark source row C",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["X_1","q_1","service_1","O_1"]}],
+      "required_tex": ["\\mathscr S_1^{O}=\\min\\{aX_1,bq_1\\}", "\\mathscr O_1=\\mathscr O_0+\\rho_O\\mathscr S_1^{O}"]
+    },
+    {
+      "id": "worked_minima",
+      "kind": "formula",
+      "latex_label": "eq:worked_minima_app",
+      "magnitude": "componentwise operating, capacity, investment and reserve minima",
+      "unit": "goods, capacity and service",
+      "scenario": "high-capacity positive target",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/analytical_conditions.csv","key":{"capacity_case":"high","fixed_transfer":"0.0"},"fields":["s_required","X_min","q_required","I_min","B_min"]}],
+      "required_tex": ["X_{\\min}=\\frac{s_{\\mathrm{req}}}{a}", "I_{\\min}(\\phi)", "B_{\\min}=\\frac{X_{\\min}}{R_B}"]
+    },
+    {
+      "id": "worked_joint_financing",
+      "kind": "formula",
+      "latex_label": "eq:worked_joint_financing_app",
+      "magnitude": "minimum public finance for the opportunity gate",
+      "unit": "date-0 goods",
+      "scenario": "high-capacity fixed transfer 12",
+      "printed_precision": "symbolic_exact",
+      "sources": [{"file":"results/analytical_conditions.csv","key":{"capacity_case":"high","fixed_transfer":"12.0"},"fields":["fixed_transfer","I_min","B_min","minimum_date0_finance","available_net_resources","fiscally_feasible"]}],
+      "required_tex": ["y_T+I_{\\min}(\\phi)+B_{\\min}", "\\le T-C_{\\mathrm{adm}}"]
+    },
+    {
+      "id": "worked_cases",
+      "kind": "scenario_table",
+      "latex_label": "tab:worked_cases_app",
+      "magnitude": "A-E demand and opportunity outcomes",
+      "unit": "date-0 goods; capacity and opportunity indices",
+      "scenario": "A-E",
+      "printed_precision": {"m_H":2,"phi":2,"T":0,"y_T":0,"I_q":0,"B_0":0,"delta_D0_dir":1,"O_1":2,"gates":"exact"},
+      "sources": [
+        {"file":"results/scenarios.csv","key":{"scenario":"A"},"fields":["delta_D0_dir","O_1","demand_gate","opportunity_gate"]},
+        {"file":"results/scenarios.csv","key":{"scenario":"B"},"fields":["delta_D0_dir","O_1","demand_gate","opportunity_gate"]},
+        {"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["delta_D0_dir","O_1","demand_gate","opportunity_gate"]},
+        {"file":"results/scenarios.csv","key":{"scenario":"D"},"fields":["delta_D0_dir","O_1","demand_gate","opportunity_gate"]},
+        {"file":"results/constructive_case.csv","key":{"scenario":"E"},"fields":["delta_D0_dir","O_1","demand_gate","opportunity_gate"]}
+      ]
+    },
+    {
+      "id": "worked_gate_map",
+      "kind": "figure",
+      "latex_label": "fig:worked_gate_map_app",
+      "magnitude": "two-gate scenario coordinates",
+      "unit": "direct-demand margin and opportunity-minus-target index",
+      "scenario": "A-D",
+      "printed_precision": "vector coordinates derived without editorial rounding",
+      "sources": [
+        {"file":"results/scenarios.csv","key":{"scenario":"A"},"fields":["delta_D0_dir","O_1"]},
+        {"file":"results/scenarios.csv","key":{"scenario":"B"},"fields":["delta_D0_dir","O_1"]},
+        {"file":"results/scenarios.csv","key":{"scenario":"C"},"fields":["delta_D0_dir","O_1"]},
+        {"file":"results/scenarios.csv","key":{"scenario":"D"},"fields":["delta_D0_dir","O_1"]}
+      ],
+      "graphic_path": "book_through_chapter_16_v22_assets/scenario_gate_map.pdf",
+      "caption_terms": ["Cases A--D", "demand--opportunity plane"]
+    },
+    {
+      "id": "worked_mpc_frontier",
+      "kind": "frontier",
+      "latex_label": "eq:worked_mpc_frontier_app",
+      "magnitude": "fixed-allocation demand frontier",
+      "unit": "goods per income unit",
+      "scenario": "Case C allocation",
+      "printed_precision": "exact fraction 1/2",
+      "sources": [{"file":"results/fixed_policy_gate_thresholds.csv","key":{},"fields":["demand_m_h_max"]}],
+      "source": {"file":"results/fixed_policy_gate_thresholds.csv","key":{},"field":"demand_m_h_max"},
+      "oracle_field": "m_H_star"
+    },
+    {
+      "id": "worked_phi_frontier",
+      "kind": "frontier",
+      "latex_label": "eq:worked_phi_frontier_app",
+      "magnitude": "fixed-allocation conversion frontier",
+      "unit": "capacity per investment good",
+      "scenario": "Case C allocation",
+      "printed_precision": "exact fraction 73/300 and repeating decimal",
+      "sources": [{"file":"results/fixed_policy_gate_thresholds.csv","key":{},"fields":["opportunity_phi_min"]}],
+      "source": {"file":"results/fixed_policy_gate_thresholds.csv","key":{},"field":"opportunity_phi_min"},
+      "oracle_field": "phi_star"
+    },
+    {
+      "id": "worked_conditional_regions",
+      "kind": "figure",
+      "latex_label": "fig:worked_conditional_regions_app",
+      "magnitude": "fixed-allocation joint gate regions",
+      "unit": "m_H response and capacity per investment good",
+      "scenario": "C, D and E",
+      "printed_precision": "exact boundaries; unrounded point coordinates",
+      "sources": [
+        {"file":"results/fixed_policy_gate_thresholds.csv","key":{},"fields":["demand_m_h_max","opportunity_phi_min"]},
+        {"file":"results/constructive_case.csv","key":{"scenario":"E"},"fields":["m_H","phi"]}
+      ],
+      "graphic_path": "book_through_chapter_16_v22_assets/conditional_gate_regions.pdf",
+      "caption_terms": ["Exact conditional regions", "Equality belongs to the passing regions"]
+    },
+    {
+      "id": "worked_capped_maximum",
+      "kind": "numeric_anchor",
+      "latex_label": null,
+      "magnitude": "maximum direct demand subject to opportunity and productive ceiling",
+      "unit": "date-0 goods at P0=P1=1",
+      "scenario": "optimization with productive ceiling",
+      "printed_precision": {"digits":3,"mode":"fixed"},
+      "sources": [{"file":"results/optimization_summary.csv","key":{"case":"productive_investment_ceiling"},"fields":["delta_demand_max","investment","transfer","reserve"]}],
+      "source": {"file":"results/optimization_summary.csv","key":{"case":"productive_investment_ceiling"},"field":"delta_demand_max"},
+      "anchor_text": "Conditional on productive investment not exceeding the capacity ceiling",
+      "context_after": 500
+    },
+    {
+      "id": "worked_uncapped_maximum",
+      "kind": "numeric_anchor",
+      "latex_label": null,
+      "magnitude": "maximum direct demand after removing only the productive ceiling",
+      "unit": "date-0 goods at P0=P1=1",
+      "scenario": "optimization without productive ceiling",
+      "printed_precision": {"digits":0,"mode":"fixed"},
+      "sources": [{"file":"results/optimization_summary.csv","key":{"case":"no_productive_investment_ceiling"},"fields":["delta_demand_max","investment","transfer","reserve"]}],
+      "source": {"file":"results/optimization_summary.csv","key":{"case":"no_productive_investment_ceiling"},"field":"delta_demand_max"},
+      "anchor_text": "Allowing investment labels beyond capacity saturation",
+      "context_after": 350
+    }
+  ]
+}

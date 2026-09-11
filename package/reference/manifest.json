@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "manuscript_version": "v22",
+  "parameter_set_id": "synthetic-benchmark-v4",
+  "separation_contract": "Generation code cannot read this manifest or reference directory; only verification.py uses them.",
+  "files": [
+    {
+      "id": "file_01_conditional_gate_regions_pdf",
+      "type": "pdf_basic",
+      "generated_path": "figures/conditional_gate_regions.pdf",
+      "reference_path": "reference/figures/conditional_gate_regions.pdf",
+      "reference_sha256": "5552d2134b30b604e4586cf4115294ce0dc3d1101c3277d4f45f3a6202f07dc3"
+    },
+    {
+      "id": "file_02_conditional_gate_regions_svg",
+      "type": "svg",
+      "generated_path": "figures/conditional_gate_regions.svg",
+      "reference_path": "reference/figures/conditional_gate_regions.svg",
+      "reference_sha256": "4453977d5b70b7636b8abe287ea91bc277572deb4b63c255924bb616a29b5289"
+    },
+    {
+      "id": "file_03_demand_sensitivity_pdf",
+      "type": "pdf_basic",
+      "generated_path": "figures/demand_sensitivity.pdf",
+      "reference_path": "reference/figures/demand_sensitivity.pdf",
+      "reference_sha256": "6ef3fe72694a33b1d291fd0358f5f33ffed51398b5d673de3146b425fd19d259"
+    },
+    {
+      "id": "file_04_demand_sensitivity_svg",
+      "type": "svg",
+      "generated_path": "figures/demand_sensitivity.svg",
+      "reference_path": "reference/figures/demand_sensitivity.svg",
+      "reference_sha256": "90be8c386e23dfe0548244607f0705333dd4c50d4e1586a46d600958911dace1"
+    },
+    {
+      "id": "file_05_opportunity_sensitivity_pdf",
+      "type": "pdf_basic",
+      "generated_path": "figures/opportunity_sensitivity.pdf",
+      "reference_path": "reference/figures/opportunity_sensitivity.pdf",
+      "reference_sha256": "e12fcc5868ee09bcf7bd0f2f51288c5ab9b7833a9d944463a8a6ec628388b191"
+    },
+    {
+      "id": "file_06_opportunity_sensitivity_svg",
+      "type": "svg",
+      "generated_path": "figures/opportunity_sensitivity.svg",
+      "reference_path": "reference/figures/opportunity_sensitivity.svg",
+      "reference_sha256": "96216371d4d1e977992b06d11ee75e4462336dab57abf7c233e34aee4b7d58bd"
+    },
+    {
+      "id": "file_07_scenario_gate_map_pdf",
+      "type": "pdf_basic",
+      "generated_path": "figures/scenario_gate_map.pdf",
+      "reference_path": "reference/figures/scenario_gate_map.pdf",
+      "reference_sha256": "142f527262c29ec88102541a0f54038d611e27a2d534c05e1cacf8ac099f2d7b"
+    },
+    {
+      "id": "file_08_scenario_gate_map_svg",
+      "type": "svg",
+      "generated_path": "figures/scenario_gate_map.svg",
+      "reference_path": "reference/figures/scenario_gate_map.svg",
+      "reference_sha256": "feffe2cda4bdb6eb1fadce6c4e7a4805d9e50f670eb9126854fbd1193a95f401"
+    },
+    {
+      "id": "file_09_accounting_checks_csv",
+      "type": "csv",
+      "generated_path": "results/accounting_checks.csv",
+      "reference_path": "reference/numeric/accounting_checks.csv",
+      "reference_sha256": "aed14e687aa7ae07be26e52a6614d0c4f85d2b5fba4e55e66f9067db071f367a",
+      "keys": [
+        "scenario",
+        "check"
+      ]
+    },
+    {
+      "id": "file_10_accounting_table_tex",
+      "type": "text",
+      "generated_path": "results/accounting_table.tex",
+      "reference_path": "reference/numeric/accounting_table.tex",
+      "reference_sha256": "2b7252df9afa9dea4816d80f8b25c9195ad06a3156f26525d132997981d4d3dc"
+    },
+    {
+      "id": "file_11_analytical_conditions_csv",
+      "type": "csv",
+      "generated_path": "results/analytical_conditions.csv",
+      "reference_path": "reference/numeric/analytical_conditions.csv",
+      "reference_sha256": "1e9c2c3afec38f58f877b0f330d1821f83b3cc5db6d0e6a440b504b53257f59c",
+      "keys": [
+        "capacity_case",
+        "fixed_transfer"
+      ]
+    },
+    {
+      "id": "file_12_analytical_table_tex",
+      "type": "text",
+      "generated_path": "results/analytical_table.tex",
+      "reference_path": "reference/numeric/analytical_table.tex",
+      "reference_sha256": "712cdf025f8cb279e1477d6f0219f1137f24bba29751d8a52d52c7a0df673a90"
+    },
+    {
+      "id": "file_13_balance_sheet_ledger_csv",
+      "type": "csv",
+      "generated_path": "results/balance_sheet_ledger.csv",
+      "reference_path": "reference/numeric/balance_sheet_ledger.csv",
+      "reference_sha256": "329caeb88db5046c0c522cfc9f1ee3bc839ab6f65c33d2422f8445e981ecfa3a",
+      "keys": [
+        "entry_id"
+      ]
+    },
+    {
+      "id": "file_14_cash_ledger_csv",
+      "type": "csv",
+      "generated_path": "results/cash_ledger.csv",
+      "reference_path": "reference/numeric/cash_ledger.csv",
+      "reference_sha256": "e37c7702be1f75c96e1b70ab626c50621372f7c8e972921a33cbeaccad80c7fa",
+      "keys": [
+        "entry_id"
+      ]
+    },
+    {
+      "id": "file_15_conditional_gate_regions_csv",
+      "type": "csv",
+      "generated_path": "results/conditional_gate_regions.csv",
+      "reference_path": "reference/numeric/conditional_gate_regions.csv",
+      "reference_sha256": "ffc8995f4eaa5f6f1b2e843e05ba1981875afa7fff23da4636b73eb89b6f4f50",
+      "keys": [
+        "m_H",
+        "phi"
+      ]
+    },
+    {
+      "id": "file_16_constructive_case_accounting_checks_csv",
+      "type": "csv",
+      "generated_path": "results/constructive_case_accounting_checks.csv",
+      "reference_path": "reference/numeric/constructive_case_accounting_checks.csv",
+      "reference_sha256": "ae9a00600c44f642c4435d1530da6d6126b8ca9a16514d42d54c0ba0b08299fb",
+      "keys": [
+        "scenario",
+        "check"
+      ]
+    },
+    {
+      "id": "file_17_constructive_case_ledger_entries_csv",
+      "type": "csv",
+      "generated_path": "results/constructive_case_ledger_entries.csv",
+      "reference_path": "reference/numeric/constructive_case_ledger_entries.csv",
+      "reference_sha256": "d6a92a8b83f71399e48f5cf0f1f66eada70af08b1e69a4cb8b7ffe4b363c2ab0",
+      "keys": [
+        "entry_id"
+      ]
+    },
+    {
+      "id": "file_18_constructive_case_table_tex",
+      "type": "text",
+      "generated_path": "results/constructive_case_table.tex",
+      "reference_path": "reference/numeric/constructive_case_table.tex",
+      "reference_sha256": "d081a23719b02479e0343dbdf7451ed11521c13b91491d4807e8191c2d4c2711"
+    },
+    {
+      "id": "file_19_constructive_case_csv",
+      "type": "csv",
+      "generated_path": "results/constructive_case.csv",
+      "reference_path": "reference/numeric/constructive_case.csv",
+      "reference_sha256": "e1287937acc82173a4986499157e4a26bcc25ba3255a0adcb57e250e727d68e7",
+      "keys": [
+        "scenario"
+      ]
+    },
+    {
+      "id": "file_20_fixed_policy_gate_thresholds_csv",
+      "type": "csv",
+      "generated_path": "results/fixed_policy_gate_thresholds.csv",
+      "reference_path": "reference/numeric/fixed_policy_gate_thresholds.csv",
+      "reference_sha256": "c1bb18bf5c0d74ca5b020985d736a446e9b27d06e020d28eb51c1b6a80788729",
+      "keys": [
+        "opportunity_status"
+      ]
+    },
+    {
+      "id": "file_21_ledger_entries_csv",
+      "type": "csv",
+      "generated_path": "results/ledger_entries.csv",
+      "reference_path": "reference/numeric/ledger_entries.csv",
+      "reference_sha256": "a8f71bc256f96a0680095bc50771c801d0f61e7e4b240f8bb75b3e2277cf336e",
+      "keys": [
+        "entry_id"
+      ]
+    },
+    {
+      "id": "file_22_optimization_summary_csv",
+      "type": "csv",
+      "generated_path": "results/optimization_summary.csv",
+      "reference_path": "reference/numeric/optimization_summary.csv",
+      "reference_sha256": "8051868ccd8e9b2968dd18f7f1136b31c30d2517d0260be1f8cf8e27e0397cd4",
+      "keys": [
+        "case"
+      ]
+    },
+    {
+      "id": "file_23_parameters_table_tex",
+      "type": "text",
+      "generated_path": "results/parameters_table.tex",
+      "reference_path": "reference/numeric/parameters_table.tex",
+      "reference_sha256": "7519323902b521b09be85c025e437a93da446ab17b5571dbd663023f87c8f1a7"
+    },
+    {
+      "id": "file_24_parameters_csv",
+      "type": "csv",
+      "generated_path": "results/parameters.csv",
+      "reference_path": "reference/numeric/parameters.csv",
+      "reference_sha256": "44c7b0ab91713695607d557109f2c1a380558af503456bfbba3bf9ebbaa92865",
+      "keys": [
+        "symbol"
+      ]
+    },
+    {
+      "id": "file_25_scenarios_table_tex",
+      "type": "text",
+      "generated_path": "results/scenarios_table.tex",
+      "reference_path": "reference/numeric/scenarios_table.tex",
+      "reference_sha256": "d932ad570cb5b2a8ce100040ea361a3a44085bd391000831ab775f3f97e3b880"
+    },
+    {
+      "id": "file_26_scenarios_csv",
+      "type": "csv",
+      "generated_path": "results/scenarios.csv",
+      "reference_path": "reference/numeric/scenarios.csv",
+      "reference_sha256": "38ce20beecba943bd536b22f5f72ca81ea1f433a15531836f15125092cbdc59d",
+      "keys": [
+        "scenario"
+      ]
+    },
+    {
+      "id": "file_27_sensitivity_csv",
+      "type": "csv",
+      "generated_path": "results/sensitivity.csv",
+      "reference_path": "reference/numeric/sensitivity.csv",
+      "reference_sha256": "4a04c8f1f2fc6c5a2eb8861568ab0d65a6fb9197d7c96636c30305ed734e2098",
+      "keys": [
+        "sweep",
+        "parameter_1",
+        "value_1",
+        "parameter_2",
+        "value_2"
+      ]
+    }
+  ]
+}

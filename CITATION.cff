@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this software package when using its code or results; also acknowledge the accompanying manuscript for its theoretical framework."
+title: "Automation, Institutions, and Economic Freedom: Reproducibility Package"
+type: software
+authors:
+  - given-names: Vicenzo
+    family-names: Scavino Alfaro
+    affiliation: "Independent Researcher, Lima, Peru"
+    orcid: "https://orcid.org/0009-0000-2472-9785"
+version: 0.1.2
+abstract: >-
+  Code, synthetic inputs, exact finite checks and documentation for the
+  two-date reduced-economy example accompanying manuscript v22.

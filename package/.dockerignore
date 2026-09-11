@@ -1,0 +1,11 @@
+build
+dist
+distribution
+.venv*
+**/__pycache__
+**/*.pyc
+.git
+vendor/wheels
+*.zip
+*.tar
+*.tar.gz

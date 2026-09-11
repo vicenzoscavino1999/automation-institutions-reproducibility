@@ -1,0 +1,2 @@
+scenario,description,tax_rate_tau,legal_coverage_lambda,compliance_chi,kappa_gross,T,C_adm,R,y_T,I_q,B_0,X_1,phi,delta_D0_dir,q_1,service_1,O_1,demand_gate,opportunity_gate,m_H,m_S,demand_m_H_max,opportunity_phi_min,comparison_contract
+E,Scenario C allocation in a lower-MPC synthetic environment,1.0,1.0,1.0,1.0,20.0,1.0,19.0,12.0,3.0,4.0,4.0,0.25,0.40000000000000036,0.8200000000000001,4.0,5.0,True,True,0.45,0.3,0.5,0.24333333333333332,C fiscal allocation fixed; only m_H differs from C

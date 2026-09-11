@@ -1,0 +1,71 @@
+scenario,check,check_type,residual,tolerance,status,evidence
+E,E-D0-AUTOMATION:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-AUTOMATION:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-AUTOMATION:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-AUTOMATION:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-TAX:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-TAX:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-TAX:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-TAX:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-TRANSFER:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-TRANSFER:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-TRANSFER:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-TRANSFER:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-ADMIN:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-ADMIN:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-ADMIN:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-ADMIN:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-INVESTMENT:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-INVESTMENT:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-INVESTMENT:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-INVESTMENT:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-RESERVE:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-RESERVE:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-RESERVE:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-RESERVE:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-UNUSED:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D0-UNUSED:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D0-UNUSED:payer_matches_policy,ledger_reconciliation,-0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D0-UNUSED:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D1-OPERATION:entry_count,ledger_pairing,0,1e-08,PASS,Each cash transaction must have exactly one payer and one receiver entry
+E,E-D1-OPERATION:pair_balance,ledger_pairing,0.0,1e-08,PASS,Payer and receiver cash changes must offset
+E,E-D1-OPERATION:payer_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Payer entry is reconciled to the policy-generated expected amount
+E,E-D1-OPERATION:receiver_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Receiver entry is reconciled independently to the same expected amount
+E,E-D0-RESERVE-POSITION:entry_count,ledger_pairing,0,1e-08,PASS,Each deposit operation must have an asset and a liability entry
+E,E-D0-RESERVE-POSITION:asset_liability_balance,ledger_pairing,0.0,1e-08,PASS,Asset change minus liability change must be zero
+E,E-D0-RESERVE-POSITION:asset_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Public asset entry is reconciled to the expected stock change
+E,E-D0-RESERVE-POSITION:liability_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Issuer liability entry is reconciled independently
+E,E-D0-UNUSED-POSITION:entry_count,ledger_pairing,0,1e-08,PASS,Each deposit operation must have an asset and a liability entry
+E,E-D0-UNUSED-POSITION:asset_liability_balance,ledger_pairing,0.0,1e-08,PASS,Asset change minus liability change must be zero
+E,E-D0-UNUSED-POSITION:asset_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Public asset entry is reconciled to the expected stock change
+E,E-D0-UNUSED-POSITION:liability_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Issuer liability entry is reconciled independently
+E,E-D1-RESERVE-REDEMPTION:entry_count,ledger_pairing,0,1e-08,PASS,Each deposit operation must have an asset and a liability entry
+E,E-D1-RESERVE-REDEMPTION:asset_liability_balance,ledger_pairing,0.0,1e-08,PASS,Asset change minus liability change must be zero
+E,E-D1-RESERVE-REDEMPTION:asset_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Public asset entry is reconciled to the expected stock change
+E,E-D1-RESERVE-REDEMPTION:liability_matches_policy,ledger_reconciliation,0.0,1e-08,PASS,Issuer liability entry is reconciled independently
+E,consolidated_cash_date_0,cross_account_reconciliation,0.0,1e-08,PASS,All recorded date-0 payer and receiver entries
+E,consolidated_cash_date_1,cross_account_reconciliation,0.0,1e-08,PASS,All recorded date-1 payer and receiver entries
+E,public_budget_from_ledger,cross_account_reconciliation,0.0,1e-08,PASS,Treasury receipts and uses are aggregated from ledger entries
+E,H_income_incidence_from_ledger,cross_account_reconciliation,0.0,1e-08,PASS,Ledger net cash versus H incidence
+E,S_income_incidence_from_ledger,cross_account_reconciliation,0.0,1e-08,PASS,Ledger net cash versus S incidence
+E,administrative_purchase_counted_once,cross_account_reconciliation,0.0,1e-08,PASS,Tagged receiver entries for administration
+E,investment_purchase_counted_once,cross_account_reconciliation,0.0,1e-08,PASS,Tagged receiver entries for investment
+E,direct_demand_formula_vs_ledger,independent_formula_reconciliation,-4.440892098500626e-16,1e-08,PASS,Formula versus household and supplier entries from the ledger
+E,ending_reserve_asset,stock_flow_reconciliation,0.0,1e-08,PASS,Created reserve asset less redemption equals terminal reserve
+E,ending_reserve_liability,stock_flow_reconciliation,0.0,1e-08,PASS,Issuer liability follows independently recorded entries
+E,ending_unused_asset,stock_flow_reconciliation,0.0,1e-08,PASS,Unused balance remains as a public financial asset
+E,ending_unused_liability,stock_flow_reconciliation,0.0,1e-08,PASS,Depository liability matches the unused public balance
+E,no_unregistered_transactions,ledger_completeness,0,1e-08,PASS,All transaction identifiers belong to the contract
+E,unique_entry_ids,ledger_completeness,0,1e-08,PASS,Every entry has a unique identifier
+E,public_budget_residual_0,model_identity,0.0,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,reserve_budget_residual_1,model_identity,0.0,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,consolidated_cash_residual_0,model_identity,0.0,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,consolidated_cash_residual_1,model_identity,0.0,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,household_budget_residual_h,model_identity,-5.329070518200751e-15,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,household_budget_residual_s,model_identity,0.0,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,financial_counterpart_residual_0,model_identity,0.0,1e-08,PASS,Model-level identity cross-checked after ledger construction
+E,kappa_in_unit_interval,domain,0.0,0.0,PASS,Declared parameter or outcome domain
+E,admin_not_above_tax,domain,0.0,0.0,PASS,Declared parameter or outcome domain
+E,capacity_in_unit_interval,domain,0.0,0.0,PASS,Declared parameter or outcome domain
+E,operation_within_reserve,domain,0.0,0.0,PASS,Declared parameter or outcome domain
+E,consumption_nonnegative,domain,0.0,0.0,PASS,Declared parameter or outcome domain

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "floating_point": {
+    "atol": 1e-10,
+    "rtol": 1e-12,
+    "reason": "Preserves the v4 accounting tolerance while separating scale-dependent comparison error."
+  },
+  "exact_fields": "Identifiers, keys, classes, units, booleans and states are compared exactly."
+}
+

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automation-institutions-reproducibility"
+version = "0.1.2"
+description = "Reproduction and written-file verification for the book's reduced economy example"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "reportlab==4.4.9",
+]
+
+[project.scripts]
+book-repro = "book_repro.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="620" height="410" preserveAspectRatio="xMinYMin meet" viewBox="0 0 620 410" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="620" height="410"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-410)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="82" y="60" width="470" height="285" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 82,69.193548 L 552,69.193548 Z" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.45;"/>
+			<text x="63.378" y="66.19354838709677" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,132) scale(1,-1)">0.05</text>
+			<path d="M 82,115.16129 L 552,115.16129 Z" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.45;"/>
+			<text x="67.27" y="112.16129032258064" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,224) scale(1,-1)">0.1</text>
+			<path d="M 82,207.096774 L 552,207.096774 Z" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.45;"/>
+			<text x="67.27" y="204.09677419354838" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,408) scale(1,-1)">0.2</text>
+			<path d="M 82,253.064516 L 552,253.064516 Z" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.45;"/>
+			<text x="63.378" y="250.06451612903223" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,500) scale(1,-1)">0.25</text>
+			<path d="M 82,299.032258 L 552,299.032258 Z" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.45;"/>
+			<text x="67.27" y="296.03225806451616" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,592) scale(1,-1)">0.3</text>
+			<path d="M 82,345 L 552,345 Z" style="stroke: rgb(85%,87%,90%); stroke-linecap: butt; stroke-width: 0.45;"/>
+			<text x="63.378" y="342.0" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,684) scale(1,-1)">0.35</text>
+			<path d="M 111.375,60 L 111.375,57 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="104.564" y="47" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,94) scale(1,-1)">0.35</text>
+			<path d="M 221.53125,60 L 221.53125,57 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="216.66625000000002" y="47" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,94) scale(1,-1)">0.5</text>
+			<path d="M 331.6875,60 L 331.6875,57 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="324.8765000000001" y="47" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,94) scale(1,-1)">0.65</text>
+			<path d="M 441.84375,60 L 441.84375,57 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="436.97875000000005" y="47" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,94) scale(1,-1)">0.8</text>
+			<path d="M 552,60 L 552,57 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.55;"/>
+			<text x="545.189" y="47" style="font-family: Helvetica; font-size: 7px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,94) scale(1,-1)">0.95</text>
+			<path d="M 82,60 L 552,60 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 82,60 L 82,345 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<text x="245.41199999999998" y="33" style="font-family: Helvetica; font-size: 8px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,66) scale(1,-1)">Exposed-group spending response m_H</text>
+			<rect x="84" y="329" width="105" height="13" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="87" y="332" style="font-family: Helvetica; font-size: 7.5px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,664) scale(1,-1)">Conversion efficiency phi</text>
+			<text x="82" y="358" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,716) scale(1,-1)">Conditional gate regions under the fixed Scenario C allocation</text>
+			<rect x="82" y="60" width="139.53125000000003" height="186.93548387096772" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,93%,98%); fill-rule: evenodd;"/>
+			<rect x="82" y="246.93548387096772" width="139.53125000000003" height="98.06451612903228" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,95%,84%); fill-rule: evenodd;"/>
+			<rect x="221.53125000000003" y="60" width="330.46875" height="186.93548387096772" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,94%,94%); fill-rule: evenodd;"/>
+			<rect x="221.53125000000003" y="246.93548387096772" width="330.46875" height="98.06451612903228" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,91%,84%); fill-rule: evenodd;"/>
+			<rect x="82" y="60" width="470" height="285" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.8; fill: none; fill-rule: evenodd;"/>
+			<path d="M 221.53125,60 L 221.53125,345 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 5, 3;"/>
+			<path d="M 82,246.935484 L 552,246.935484 Z" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 5, 3;"/>
+			<text x="123.510125" y="153.46774193548384" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,306) scale(1,-1)">Demand only</text>
+			<text x="130.01262499999999" y="295.96774193548384" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,591) scale(1,-1)">Both pass</text>
+			<text x="371.263125" y="153.46774193548384" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,306) scale(1,-1)">Neither</text>
+			<text x="350.513625" y="295.96774193548384" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,591) scale(1,-1)">Opportunity only</text>
+			<text x="226.53125000000003" y="67" style="font-family: Helvetica; font-size: 8px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,134) scale(1,-1)">m_H*=0.500</text>
+			<text x="87" y="251.93548387096772" style="font-family: Helvetica; font-size: 8px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,503) scale(1,-1)">phi*=0.2433</text>
+			<circle cx="515.28125" cy="253.06451612903223" r="5.2" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(18%,33%,59%); fill-rule: evenodd;"/>
+			<text x="523.28125" y="257.0645161290322" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,514) scale(1,-1)">C</text>
+			<circle cx="515.28125" cy="96.7741935483871" r="5.2" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(18%,33%,59%); fill-rule: evenodd;"/>
+			<text x="523.28125" y="100.7741935483871" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,201) scale(1,-1)">D</text>
+			<circle cx="184.81250000000003" cy="253.06451612903223" r="5.2" style="stroke: rgb(14%,16%,20%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(77%,35%,6%); fill-rule: evenodd;"/>
+			<text x="192.81250000000003" y="257.0645161290322" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(14%,16%,20%); stroke:none;" transform="translate(0,514) scale(1,-1)">E</text>
+		</g>
+	</g>
+</svg>

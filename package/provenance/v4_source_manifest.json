@@ -1,0 +1,31 @@
+{
+  "manifest_version": 1,
+  "description": "Static provenance recorded when the independent example was created. External verification is optional.",
+  "sources": [
+    {
+      "id": "book_v9_tex",
+      "relative_path": "book_through_chapter_16_v9_EN.tex",
+      "sha256": "C8AEC812B8390A8AE5C7353E3B6DB7272F50C4734B3B1547E6316A6AD635A3A8"
+    },
+    {
+      "id": "approved_design",
+      "relative_path": "book_v9_reduced_economy_example_design_ES.md",
+      "sha256": "AB1A68B77592885909B6550D0E5A049FC076F0F79DD01214395A8C7444E73013"
+    },
+    {
+      "id": "v9_referee",
+      "relative_path": "referee_book_v9_2026_09_07/01_DICTAMEN_V9_ES.md",
+      "sha256": "E59E9EAD22BDFED459EC69E3714AAFEE03D326D99E9AC806D2A99648329147C0"
+    },
+    {
+      "id": "example_v2_tex",
+      "relative_path": "reduced_economy_example_v2/reduced_economy_example_v2_EN.tex",
+      "sha256": "8411AEFB2AA801BC82B2AEE2B59F14D42D22797E360204B0C812DB4EF2077B90"
+    },
+    {
+      "id": "example_v3_tex",
+      "relative_path": "reduced_economy_example_v3/reduced_economy_example_v3_EN.tex",
+      "sha256": "43B844AC69627BB1CFA1544B90C550691404F3AF7CF37892F31FD72E566E3419"
+    }
+  ]
+}

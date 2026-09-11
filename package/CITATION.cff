@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite both this software package and the accompanying monograph when using the reduced-economy example."
+title: "Automation, Institutions, and Economic Freedom: Reproducibility Package"
+type: software
+authors:
+  - given-names: Vicenzo
+    family-names: Scavino Alfaro
+    orcid: "https://orcid.org/0009-0000-2472-9785"
+version: 0.1.2
+abstract: >-
+  Code, frozen synthetic inputs, independent finite checks and documentation for
+  the two-date reduced-economy example accompanying manuscript v22.
+preferred-citation:
+  type: book
+  title: "Automation, Institutions, and Economic Freedom: A Theoretical Monograph on Technological Transition and Shared Prosperity"
+  authors:
+    - given-names: Vicenzo
+      family-names: Scavino Alfaro
+      orcid: "https://orcid.org/0009-0000-2472-9785"
+  year: 2026

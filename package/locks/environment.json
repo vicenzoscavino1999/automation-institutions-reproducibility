@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "tested_environment": {
+    "status": "passed",
+    "operating_system": "Windows",
+    "architecture": "AMD64",
+    "python_required": ">=3.12,<3.13",
+    "python_selected_for_installation": "3.12.10",
+    "python_executable_kind": "fresh project-local virtual environment",
+    "reportlab_observed": "4.4.9",
+    "calculation_network_required": false,
+    "dependency_installation_source": "vendor/wheels"
+  },
+  "dependencies": [
+    {"name": "charset-normalizer", "version": "3.5.1"},
+    {"name": "Pillow", "version": "12.3.0"},
+    {"name": "ReportLab", "version": "4.4.9"},
+    {"name": "setuptools", "version": "80.9.0", "role": "local build backend"}
+  ],
+  "linux_container_recipe": {
+    "platform": "linux/amd64",
+    "python_base": "python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+    "dependency_installation_source": "vendor/wheels-linux-amd64",
+    "calculation_network_mode": "none",
+    "execution_evidence": "The distributed ENVIRONMENT_MANIFEST.json records effective image identities and verified runs; DEBIAN_PACKAGES.tsv records the delivered-image inventory."
+  },
+  "documentation_toolchain": {
+    "windows_latexmk_observed": "4.88",
+    "windows_pdftex_observed": "TeX Live 2026",
+    "linux_recipe": "Dockerfile docs target",
+    "calculation_independence": "TeX and Poppler are not imported by the numerical pipeline"
+  },
+  "not_run": {
+    "remote_ci": "configuration only; no remote repository or GitHub Actions execution is claimed"
+  },
+  "recovery_instructions": "docs/ENVIRONMENT_RECOVERY_ES.md"
+}

@@ -1,0 +1,122 @@
+name: Reproduce reduced economy
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: package
+
+jobs:
+  windows-numeric:
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install from bundled Windows wheels
+        shell: pwsh
+        run: .\bootstrap_windows.ps1 -VenvPath .venv-ci
+      - name: Reproduce with the Python network guard
+        shell: pwsh
+        env:
+          BOOK_REPRO_OFFLINE: "1"
+        run: |
+          .\.venv-ci\Scripts\python.exe -m book_repro check-env
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\.venv-ci\Scripts\python.exe -m book_repro reproduce --output build\ci-windows-run
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\.venv-ci\Scripts\python.exe -m book_repro verify --run build\ci-windows-run
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\.venv-ci\Scripts\python.exe -m book_repro coverage --output build\ci-windows-coverage.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-run
+          path: package/build/ci-windows-run
+
+  linux-numeric:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install from bundled Linux AMD64 wheels
+        run: |
+          python -m venv .venv-ci
+          .venv-ci/bin/python -m pip install --no-index --find-links vendor/wheels-linux-amd64 --require-hashes -r locks/requirements-linux-amd64.txt
+          .venv-ci/bin/python -m pip install --no-index --no-build-isolation --no-deps --editable .
+      - name: Reproduce with the Python network guard
+        env:
+          BOOK_REPRO_OFFLINE: "1"
+        run: |
+          .venv-ci/bin/python -m book_repro check-env
+          .venv-ci/bin/python -m book_repro reproduce --output build/ci-linux-run
+          .venv-ci/bin/python -m book_repro verify --run build/ci-linux-run
+          .venv-ci/bin/python -m book_repro coverage --output build/ci-linux-coverage.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-run
+          path: package/build/ci-linux-run
+
+  compare-platforms:
+    needs: [windows-numeric, linux-numeric]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-run
+          path: package/build/download/windows
+      - uses: actions/download-artifact@v4
+        with:
+          name: linux-run
+          path: package/build/download/linux
+      - name: Install comparison environment
+        run: |
+          python -m venv .venv-ci
+          .venv-ci/bin/python -m pip install --no-index --find-links vendor/wheels-linux-amd64 --require-hashes -r locks/requirements-linux-amd64.txt
+          .venv-ci/bin/python -m pip install --no-index --no-build-isolation --no-deps --editable .
+      - name: Compare Windows and Linux artifacts
+        env:
+          BOOK_REPRO_OFFLINE: "1"
+        run: .venv-ci/bin/python -m book_repro compare-runs --windows build/download/windows --linux build/download/linux --output build/ci-platform-comparison.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: platform-comparison
+          path: package/build/ci-platform-comparison.json
+
+  docker-linux-docs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pinned Linux AMD64 images
+        run: |
+          docker build --platform linux/amd64 --target runtime -t book-repro-runtime:0.1.2-ci .
+          docker build --platform linux/amd64 --target docs -t book-repro-docs:0.1.2-ci .
+      - name: Run calculation and document build without a network
+        run: |
+          mkdir -p build
+          docker run --rm --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -v "$PWD/build:/artifacts" book-repro-runtime:0.1.2-ci python -m book_repro reproduce --output /artifacts/ci-docker-run
+          docker run --rm --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -v "$PWD/build:/artifacts" book-repro-runtime:0.1.2-ci python -m book_repro verify --run /artifacts/ci-docker-run
+          docker run --rm --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -v "$PWD/build:/artifacts" book-repro-docs:0.1.2-ci python -m book_repro build-docs --run /artifacts/ci-docker-run --output /artifacts/ci-docker-docs
+          docker run --rm --network none -v "$PWD/build:/artifacts" book-repro-docs:0.1.2-ci pdfinfo /artifacts/ci-docker-docs/example_EN.pdf
+      - name: Manuscript correspondence status
+        run: echo "check-book not_run - the protected manuscript is intentionally absent from CI"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docker-reproduction-and-document
+          path: |
+            package/build/ci-docker-run
+            package/build/ci-docker-docs

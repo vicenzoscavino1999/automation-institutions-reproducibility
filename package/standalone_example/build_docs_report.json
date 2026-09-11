@@ -1,0 +1,240 @@
+{
+  "command": [
+    "/usr/bin/latexmk",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "example_EN.tex"
+  ],
+  "document": {
+    "overfull_boxes": 0,
+    "pages": 10,
+    "pdf": "example_EN.pdf",
+    "pdf_sha256": "28961c56e266af78082a6a52fb7e91042fd7bf5c2b3830e1b60858b5698d7e15",
+    "source": "example_EN.tex",
+    "source_sha256": "6bb50d7b061ce301a36e4a4139c2bb5f1ea63787160023bed6852420a6a15b30",
+    "undefined_references_or_citations": 0,
+    "visual_review": "pending_external_inspection"
+  },
+  "figures": {
+    "figures": [
+      {
+        "axis_domain": {
+          "x": [
+            -13,
+            1
+          ],
+          "y": [
+            -5,
+            1
+          ]
+        },
+        "coordinates": [
+          {
+            "direct_demand_margin": -12.0,
+            "direct_demand_unit": "date-0 goods at P0=P1=1",
+            "opportunity_margin": -4.0,
+            "opportunity_unit": "opportunity index minus target",
+            "scenario": "A"
+          },
+          {
+            "direct_demand_margin": 0.10000000000000142,
+            "direct_demand_unit": "date-0 goods at P0=P1=1",
+            "opportunity_margin": -4.0,
+            "opportunity_unit": "opportunity index minus target",
+            "scenario": "B"
+          },
+          {
+            "direct_demand_margin": -3.1999999999999993,
+            "direct_demand_unit": "date-0 goods at P0=P1=1",
+            "opportunity_margin": 0.0,
+            "opportunity_unit": "opportunity index minus target",
+            "scenario": "C"
+          },
+          {
+            "direct_demand_margin": -3.1999999999999993,
+            "direct_demand_unit": "date-0 goods at P0=P1=1",
+            "opportunity_margin": -2.45,
+            "opportunity_unit": "opportunity index minus target",
+            "scenario": "D"
+          }
+        ],
+        "file": "scenario_gate_map.pdf",
+        "font_family": "Bitstream Vera Sans",
+        "labels": {
+          "title": "Cases A-D in the two-gate plane",
+          "x": "Change in direct demand (date-0 goods)",
+          "y": "Opportunity above the target (index units)"
+        },
+        "sha256": "0293b7d032dfd4d48ac24f3aefdcbb9bb90e370a599d8743fab2c52160af0def",
+        "sources": [
+          "results/scenarios.csv",
+          "results/parameters.csv:O_min"
+        ],
+        "transformation": "y = O_1 - O_min; x = delta_D0_dir"
+      },
+      {
+        "axis_domain": {
+          "m_H": [
+            0.31,
+            0.95
+          ],
+          "phi": [
+            0.04,
+            0.35
+          ]
+        },
+        "boundaries": {
+          "m_H_decimal": 0.5,
+          "m_H_exact": "1/2",
+          "phi_decimal": 0.24333333333333332,
+          "phi_exact": "73/300"
+        },
+        "file": "conditional_gate_regions.pdf",
+        "font_family": "Bitstream Vera Sans",
+        "grid_frontier_mismatches": 0,
+        "grid_rows_checked": 4095,
+        "labels": {
+          "title": "Conditional regions for the fixed Case C allocation",
+          "x": "Spending response of exposed households",
+          "y": "Capacity conversion per investment unit"
+        },
+        "points": [
+          {
+            "m_H": 0.9,
+            "phi": 0.25,
+            "scenario": "C"
+          },
+          {
+            "m_H": 0.9,
+            "phi": 0.08,
+            "scenario": "D"
+          },
+          {
+            "m_H": 0.45,
+            "phi": 0.25,
+            "scenario": "E"
+          }
+        ],
+        "sha256": "0dcff280579dfa9225a8c526c9a3aeb39704077c5a4571dbf91601f3a3b54799",
+        "sources": [
+          "results/conditional_gate_regions.csv",
+          "results/fixed_policy_gate_thresholds.csv",
+          "results/scenarios.csv",
+          "results/constructive_case.csv",
+          "independent/oracle_results.json:A05"
+        ]
+      }
+    ],
+    "font_contract": {
+      "family": "Bitstream Vera Sans",
+      "files": {
+        "bold": {
+          "path": "/usr/local/lib/python3.12/site-packages/reportlab/fonts/VeraBd.ttf",
+          "sha256": "cc037385e4d55bfde89b13e03091ee93bf40c0c52ddd391ff031ab276f13b8e9"
+        },
+        "bold_italic": {
+          "path": "/usr/local/lib/python3.12/site-packages/reportlab/fonts/VeraBI.ttf",
+          "sha256": "fca0d4eeac1ced7e75e1b2274c869a351d2d83b5ed1f61d249e7bcc477c33ebe"
+        },
+        "italic": {
+          "path": "/usr/local/lib/python3.12/site-packages/reportlab/fonts/VeraIt.ttf",
+          "sha256": "2adc684d518f45232c4ad1f56522f5a82a6904c31940373e1b7030beee20fb3a"
+        },
+        "normal": {
+          "path": "/usr/local/lib/python3.12/site-packages/reportlab/fonts/Vera.ttf",
+          "sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d"
+        }
+      },
+      "license": "Bitstream Vera Fonts Copyright",
+      "license_path": "/work/assets/fonts/BITSTREAM_VERA_LICENSE.txt",
+      "license_sha256": "56ba023a52d67027ece50e9154cbb65044f2951066e216b44619cf7a0ab50627",
+      "registered_names": {
+        "bold": "BookFigureVeraBold",
+        "bold_italic": "BookFigureVeraBoldItalic",
+        "italic": "BookFigureVeraItalic",
+        "normal": "BookFigureVera"
+      },
+      "reportlab_version": "4.4.9",
+      "source": "fonts bundled with the pinned ReportLab dependency"
+    },
+    "schema_version": 1,
+    "scientific_equivalence": {
+      "basis": "computed coordinates, transformations, exact boundaries, units and region classifications",
+      "binary_pdf_identity_required": false,
+      "status": "passed",
+      "typography_difference": "Bitstream Vera Sans replaces the locally installed Arial used by the v22 editorial figures."
+    },
+    "status": "passed",
+    "visual_review": {
+      "pages_expected": 2,
+      "status": "pending_external_inspection"
+    }
+  },
+  "latexmk_version": "Latexmk, John Collins, 11 Dec. 2024. Version 4.86",
+  "pdflatex_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "schema_version": 1,
+  "seconds": 2.7228599510000038,
+  "source_run": "/work/build/release-windows-run",
+  "source_run_report_sha256": "c371e93b42f2483495f08af5c38b7d151035704c6f05fbc5d14cf9ac192ba8aa",
+  "source_run_verification": {
+    "relation_to_current_package": "current",
+    "status": "passed"
+  },
+  "status": "passed",
+  "tables": {
+    "outputs": {
+      "accounting_table.tex": {
+        "bytes": 271,
+        "sha256": "b7e8517786f1b8922824858a7ccb559831816b8b834a0a33a7612e75d2522bbf"
+      },
+      "analytical_table.tex": {
+        "bytes": 405,
+        "sha256": "16a4b46924c750dc7cea857c9e0ae2f0d0d706c9237922a79b79fe3daa943481"
+      },
+      "cases_table.tex": {
+        "bytes": 512,
+        "sha256": "ae4cf4f8e0aabe4ada500722aa0c630dfd33b8bcf0b5a9e580e906ef4d42b638"
+      },
+      "household_closure.tex": {
+        "bytes": 164,
+        "sha256": "0578a75cb14bf5b149444a0acea21edf73f1ac4ec2da9485511d72715520beac"
+      },
+      "optimization_table.tex": {
+        "bytes": 282,
+        "sha256": "77f308f284a5e2f948cbfaa88090011d3b0c326ae85862fdb22ecb5ce9a3748e"
+      },
+      "parameters_table.tex": {
+        "bytes": 1827,
+        "sha256": "5a8f0c92aa5b5cfa133b57d6fc42e2fb79e484282ca2a3fa3d6ef8cd4eded007"
+      }
+    },
+    "presentation": {
+      "accounting_residual": "scientific_2",
+      "analytical": 3,
+      "cases": {
+        "O_1": 2,
+        "delta_D0_dir": 1,
+        "m_H": 2,
+        "phi": 2
+      },
+      "household_closure": "effective_run_configuration",
+      "optimization": 3,
+      "parameters": 3
+    },
+    "rule": "Displayed results are formatted from unrounded CSV fields; baseline closure values are derived from the verified run configuration.",
+    "schema_version": 1,
+    "sources": {
+      "accounting_checks.csv": "aed14e687aa7ae07be26e52a6614d0c4f85d2b5fba4e55e66f9067db071f367a",
+      "analytical_conditions.csv": "1e9c2c3afec38f58f877b0f330d1821f83b3cc5db6d0e6a440b504b53257f59c",
+      "constructive_case.csv": "e1287937acc82173a4986499157e4a26bcc25ba3255a0adcb57e250e727d68e7",
+      "constructive_case_accounting_checks.csv": "ae9a00600c44f642c4435d1530da6d6126b8ca9a16514d42d54c0ba0b08299fb",
+      "inputs/config/benchmark.json": "7756c61f495da1688f23b72816989d9d55a61b882eb7eed60e0f2ea94533996d",
+      "optimization_summary.csv": "0716e36dbb558e84f12b30a924498dbad775d1ca4814d335efc8ee08ef098450",
+      "parameters.csv": "44c7b0ab91713695607d557109f2c1a380558af503456bfbba3bf9ebbaa92865",
+      "scenarios.csv": "38ce20beecba943bd536b22f5f72ca81ea1f433a15531836f15125092cbdc59d"
+    },
+    "status": "passed"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.2",
+  "manuscript_version": "v22",
+  "example_source_version": "v4",
+  "derivation": "The economic engine derives from v4. Version 0.1.0 added isolated configuration, written-file verification, independent finite oracles, documentary construction, Windows/Linux environments, CI configuration, whole-book coverage and an allowlisted local distribution without changing the frozen economic benchmark. Version 0.1.1 corrected receiver-facing documentation, version metadata and table presentation. Version 0.1.2 removes the extraneous backslashes before PowerShell continuation characters and adds a focused packaging regression; neither documentation-only revision changes an economic equation, parameter, tolerance or frozen result.",
+  "sources": [
+    {
+      "id": "manuscript_v22",
+      "relative_path": "book_through_chapter_16_v22_EN.tex",
+      "sha256": "7c568608c9096efb9ccbc40416d171bd631d796daa06e38607eacb6988623d6e"
+    },
+    {
+      "id": "v4_model",
+      "relative_path": "reduced_economy_example_v4/code/model.py",
+      "sha256": "3cb511aa76de24ab37ef4105baf25d29b74dffe389a73e9a486b3cf394710557"
+    },
+    {
+      "id": "v4_generator",
+      "relative_path": "reduced_economy_example_v4/code/run_example.py",
+      "sha256": "f3ea0c0fa2ede9ec7d7b0d1cc989d07686f2b669db286998c4af1ed3d3a36853"
+    },
+    {
+      "id": "v4_tests",
+      "relative_path": "reduced_economy_example_v4/code/test_model.py",
+      "sha256": "d50d635e8b4584c2027a29717ef6145a0418113398df1aca9ea2cdc487b944c9"
+    },
+    {
+      "id": "v4_integration_test",
+      "relative_path": "reduced_economy_example_v4/code/test_generator_integration.py",
+      "sha256": "70e43205a6dda499131aae68001cb69f30b7e5760d0090bc834c8c856c251424"
+    }
+  ]
+}

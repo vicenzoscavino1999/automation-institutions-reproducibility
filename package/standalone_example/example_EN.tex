@@ -1,0 +1,369 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,longtable,array}
+\usepackage{graphicx,float}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\definecolor{ink}{HTML}{262C36}
+\definecolor{blue}{HTML}{315A93}
+\definecolor{light}{HTML}{F3F6FA}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.62em}
+\setlength{\emergencystretch}{2em}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Reduced economy of automation}
+\rhead{Reproducible example}
+\cfoot{\thepage}
+
+\newcommand{\DD}{\Delta D_0^{\mathrm{dir}}}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\pass}{\textsc{pass}}
+\newcommand{\fail}{\textsc{fail}}
+
+\title{\textbf{A Reduced Economy of Automation,\\Direct Demand, and Opportunity}\\[0.5em]
+\large A self-contained reproducible example}
+\author{Vicenzo Scavino Alfaro}
+\date{Manuscript correspondence: v22\\Synthetic benchmark: v4}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document isolates the worked quantitative example that accompanies
+\emph{Automation, Institutions, and Economic Freedom}. It joins a liquid-income
+displacement, a fiscal collection rule, household incidence, public allocation,
+institutional capacity, and a future opportunity service. The exercise has two
+dates and two household groups. It measures direct expenditure at fixed prices;
+it is not a solved HANK equilibrium, an empirical calibration, or an estimate.
+Every displayed table and every plotted coordinate is generated from the
+machine-readable output of one verified run.
+\end{abstract}
+
+\clearpage
+\begingroup
+\setlength{\parskip}{0pt}
+\tableofcontents
+\endgroup
+\clearpage
+
+\section{Question, timing, and scope}
+
+The example asks when a common automation shock and public budget can pass two
+different gates:
+\[
+\Delta D_0^{\mathrm{dir}}\geq 0,
+\qquad
+\text{date-1 opportunity}\geq \OO_{\min}.
+\]
+The first gate records immediate incidence and first-round expenditure. The
+second requires both installed capacity and a funded operating input. Separating
+the gates makes it possible for a policy to pass one, both, or neither.
+
+There is a unit mass of households. Group $H$ is exposed to the automation
+income shift and group $S$ owns the corresponding claim. Group variables are
+aggregates. At date 0, a liquid-income flow $Z>0$ moves from $H$ to $S$.
+At date 1, a public reserve may finance an operating input. Prices and the gross
+return on that reserve are normalized to
+\[
+P_0=P_1=R_B=1.
+\]
+The effective run configuration closes the baseline household accounts as
+follows:
+\[
+\input{tables/household_closure.tex}
+\]
+The spending coefficients are local affine responses over the finite synthetic
+allocations studied here, not global consumption functions. In particular,
+initial consumption is not obtained by multiplying initial income by a marginal
+spending response.
+
+\section{Fiscal capture and closed accounts}
+
+Let $\tau$ be the statutory rate, $\lambda_{\mathrm{legal}}$ legal coverage, and
+$\chi_{\mathrm{comp}}$ compliance. Gross receipts are
+\begin{equation}
+B_{\mathrm{legal}}=\lambda_{\mathrm{legal}}Z,
+\qquad
+T=\tau\chi_{\mathrm{comp}}B_{\mathrm{legal}}
+=\kappa_{\mathrm{gross}}Z,
+\qquad
+\kappa_{\mathrm{gross}}=\tau\lambda_{\mathrm{legal}}\chi_{\mathrm{comp}}.
+\end{equation}
+The government pays an administrative cost $C_{\mathrm{adm}}$ and allocates the
+remaining receipts across a transfer $y_T$, capacity investment $I_q$, a reserve
+$B_0$, and an unused financial balance $U_0$:
+\begin{align}
+T&=C_{\mathrm{adm}}+y_T+I_q+B_0+U_0,\\
+R_BB_0&=X_1+B_1.
+\end{align}
+All fiscal allocations are nonnegative:
+\[
+C_{\mathrm{adm}},y_T,I_q,B_0,U_0,X_1,B_1\geq0.
+\]
+The reserve is a public deposit asset with an equal depository liability. It is
+not date-0 spending. Administrative and investment purchases enter the declared
+first-round measure once; the later spending of their suppliers is outside that
+measure.
+
+Household income changes are
+\[
+Y_H=Y_{H0}-Z+y_T,
+\qquad
+Y_S=Y_{S0}+Z-T.
+\]
+With $m_T=m_H$, consumption and saving obey
+\begin{align}
+C_H&=C_{H0}+m_H(-Z+y_T),
+&S_H&=S_{H0}+(1-m_H)(-Z+y_T),\\
+C_S&=C_{S0}+m_S(Z-T),
+&S_S&=S_{S0}+(1-m_S)(Z-T).
+\end{align}
+End-of-date liquid assets satisfy $A_{j1}=A_{j0}+S_j$. The implementation checks
+nonnegative consumption and the applicable liquid-asset restrictions for every
+reported allocation.
+
+\section{The two gates}
+
+\subsection{Direct demand}
+
+Let $d_{\mathrm{adm}}$ and $d_I$ denote the portions of administrative and
+investment purchases included in first-round domestic expenditure. The direct
+demand change is
+\begin{equation}
+\boxed{
+\DD=-m_HZ+m_S(Z-T)+m_Hy_T
++d_{\mathrm{adm}}C_{\mathrm{adm}}+d_II_q.}
+\end{equation}
+The demand gate passes when $\DD\geq0$. This is an incidence result under fixed
+prices and fixed spending responses. An output or inflation result would require
+an additional equilibrium closure.
+
+\subsection{Capacity and opportunity}
+
+Inherited capacity depreciates and may suffer damage:
+\begin{align}
+q_1^{\mathrm{pre}}&=(1-\delta_q)q_0-d_q,\\
+q_1&=\Pi_{[0,1]}\!\left(q_1^{\mathrm{pre}}+\phi I_q\right).
+\end{align}
+Operating input and capacity are complements:
+\begin{equation}
+\mathcal S_1^O=\min\{aX_1,bq_1\},
+\qquad
+\OO_1=\OO_0+\rho_O\mathcal S_1^O.
+\end{equation}
+The opportunity gate passes when $\OO_1\geq\OO_{\min}$.
+
+Define the service requirement
+\[
+s_{\mathrm{req}}=\frac{[\OO_{\min}-\OO_0]_+}{\rho_O}.
+\]
+The minimum-input formulas maintain the primitive conditions
+$a,b,\rho_O,\phi>0$.
+For $0<s_{\mathrm{req}}\leq b$, the componentwise minima are
+\begin{equation}
+X_{\min}=\frac{s_{\mathrm{req}}}{a},\quad
+q_{\min}=\frac{s_{\mathrm{req}}}{b},\quad
+I_{\min}(\phi)=\frac{[q_{\min}-q_1^{\mathrm{pre}}]_+}{\phi},\quad
+B_{\min}=\frac{X_{\min}}{R_B}.
+\end{equation}
+For a fixed transfer, the opportunity target is financeable exactly when
+\begin{equation}
+y_T+I_{\min}(\phi)+B_{\min}\leq T-C_{\mathrm{adm}}.
+\end{equation}
+If $s_{\mathrm{req}}=0$, the minima are zero. If $s_{\mathrm{req}}>b$, the target
+is technically impossible because projected capacity cannot exceed one.
+
+\clearpage
+\section{Synthetic parameter set}
+
+The parameters are deliberately synthetic and selected to expose the four gate
+regions. Their units are part of the computational contract.
+
+\small
+\input{tables/parameters_table.tex}
+\normalsize
+
+\clearpage
+\section{Cases A--E}
+
+Cases A--D hold the exposed-group response at its benchmark value. Case E keeps
+the complete fiscal allocation of C and changes only the local spending
+environment. Cases C and D differ only in conversion efficiency.
+
+\begin{table}[H]
+\centering
+\caption{Five calculated cases and their two gate outcomes}
+\resizebox{\textwidth}{!}{\input{tables/cases_table.tex}}
+\end{table}
+
+Figure~\ref{fig:gate-map} uses $x=\DD$ and
+$y=\OO_1-\OO_{\min}$. The vertical coordinate is therefore a distance to the
+opportunity target, not the level of opportunity itself.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\textwidth]{figures/scenario_gate_map.pdf}
+\caption{Cases A--D in the two-gate plane. A margin of zero belongs to the
+passing region.}
+\label{fig:gate-map}
+\end{figure}
+
+\clearpage
+\section{Fixed-allocation frontiers}
+
+Holding the fiscal allocation of C fixed gives
+\[
+T=20,\quad C_{\mathrm{adm}}=1,\quad y_T=12,\quad I_q=3,\quad B_0=X_1=4.
+\]
+The direct-demand expression reduces to
+\[
+\DD=4-8m_H,
+\]
+so demand passes exactly when
+\begin{equation}
+m_H\leq m_H^*=\frac12.
+\end{equation}
+Capacity is $q_1=\Pi_{[0,1]}(0.07+3\phi)$. Because the required capacity is
+$0.8$, the opportunity gate passes exactly when
+\begin{equation}
+\phi\geq\phi^*=\frac{73}{300}=0.243\overline{3}.
+\end{equation}
+Equality belongs to both passing regions.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/conditional_gate_regions.pdf}
+\caption{Exact conditional regions under the fixed Case C allocation. The
+boundaries and the C, D, and E coordinates are read from verified outputs.}
+\label{fig:conditional-regions}
+\end{figure}
+
+\section{Minimum finance and boundary cases}
+
+Table~\ref{tab:minima} reports the positive-target calculations for high and low
+conversion capacity, with and without the fixed transfer. Values are formatted
+from the unrounded machine-readable fields.
+
+\begin{table}[H]
+\centering
+\caption{Opportunity minima and fiscal feasibility}
+\label{tab:minima}
+\resizebox{\textwidth}{!}{\input{tables/analytical_table.tex}}
+\end{table}
+
+The implementation also checks two cases that a capacity-only shortcut would
+miss. First, when operation supplies only three service units while four are
+required, capacity can reach its ceiling and opportunity still remains below the
+target. Second, when the target is already satisfied, the required investment
+and reserve are zero even if preinvestment capacity is negative.
+
+\clearpage
+\section{Allocation under the common fiscal envelope}
+
+For a positive and technically attainable opportunity target, reserve the
+minimum operating balance and set unused funds to zero. Let
+\[
+F=T-C_{\mathrm{adm}}-B_{\min}.
+\]
+When the productive-investment ceiling is imposed, investment is restricted to
+the amount that can raise capacity to one. Substitution into direct demand gives
+the affine objective
+\[
+ A_D=-m_HZ+m_S(Z-T)+d_{\mathrm{adm}}C_{\mathrm{adm}},
+ \qquad
+\DD=A_D+m_HF+(d_I-m_H)I_q.
+\]
+The independent P3 calculation enumerates the complete budget polytope. The
+four capped vertices and three uncapped vertices establish the two maxima; the
+numbers below are formatted from the production output, not typed into this
+document.
+
+\begin{table}[H]
+\centering
+\caption{Demand maxima subject to financing the opportunity floor}
+\resizebox{0.93\textwidth}{!}{\input{tables/optimization_table.tex}}
+\end{table}
+
+The maximum under the productive ceiling is negative. Removing only that ceiling
+raises the arithmetic maximum but does not make joint passage feasible for the
+benchmark. The uncapped comparison permits investment labels beyond capacity
+saturation and is therefore an explicit diagnostic, not a preferred production
+technology.
+
+\section{Accounting verification}
+
+The ledger records payer and receiver entries separately and includes the public
+deposit asset and the depository liability. The residual checks cover individual
+budgets, the consolidated budget, transaction pairing, fiscal decomposition,
+capacity, opportunity, domains, and gate classifications.
+
+\begin{table}[H]
+\centering
+\caption{Calculated accounting and domain checks}
+\input{tables/accounting_table.tex}
+\end{table}
+
+The zero residuals are not treated as evidence about equilibrium prices. They
+show that the declared incidence experiment and its counterparties close under
+the stated accounting conventions.
+
+\clearpage
+\section{What the example establishes}
+
+Within its declared closure, the example establishes five operational points.
+\begin{enumerate}
+\item Fiscal capture can be decomposed into rate, coverage, and compliance.
+\item Stabilizing current direct demand and producing future opportunity are
+distinct objectives.
+\item A common public envelope may pass one gate, both gates, or neither.
+\item Installed capacity cannot replace a missing operating input.
+\item The intersection of the two gates is nonempty under the exact conditional
+frontiers shown above.
+\end{enumerate}
+
+The exercise does not solve the parent HANK model, determine the automation
+income shift, endogenize prices, estimate parameters, or rank policies by social
+welfare. Those tasks require the additional modules identified in the book.
+
+\section{Reproduction contract}
+
+The document-build directory contains the LaTeX source, six generated
+tables, two vector PDF figures, a table manifest, a figure-validation record, and
+a build report. The required order is:
+\begin{enumerate}
+\item execute a new reproduction run;
+\item verify the completed run;
+\item execute \texttt{build-docs} using that run and a new output directory;
+\item inspect every rendered page.
+\end{enumerate}
+
+This sequence is autonomous. The package-only \texttt{coverage} command checks
+the structure of the coverage registry without the manuscript. Two optional
+correspondence checks---\texttt{coverage --manuscript} and \texttt{check-book}---
+require an identified copy of manuscript v22 supplied separately. The absence of
+that protected manuscript is not a failure of the standalone example.
+
+The figures embed Bitstream Vera Sans from the pinned ReportLab dependency. The
+font is redistributable under the Bitstream Vera Fonts Copyright notice included
+with the package. Font substitution changes typography and PDF metadata, not the
+economic coordinates or region definitions.
+
+\section{Machine-readable evidence}
+
+The run retains unrounded CSV output. The editorial tables apply declared decimal
+precision only after calculation. The figure-validation record preserves every
+scenario coordinate, the transformation $\OO_1-\OO_{\min}$, both exact
+frontiers, the grid classification check, units, titles, and axis labels. The
+book correspondence registry maps each manuscript label to its output file, row
+key, field, precision, and associated check.
+
+\end{document}

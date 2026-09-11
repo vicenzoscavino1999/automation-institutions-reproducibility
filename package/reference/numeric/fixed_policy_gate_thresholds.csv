@@ -1,0 +1,2 @@
+demand_m_h_max,opportunity_phi_min,demand_constant,displaced_net_of_transfer,required_capacity,preinvestment_capacity,service_required,fixed_operation_service_ceiling,opportunity_status
+0.5,0.24333333333333332,4.0,8.0,0.8,0.07,4.0,4.0,interior_threshold

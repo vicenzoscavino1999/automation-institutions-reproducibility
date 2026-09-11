@@ -1,0 +1,54 @@
+{
+  "outputs": {
+    "accounting_table.tex": {
+      "bytes": 271,
+      "sha256": "b7e8517786f1b8922824858a7ccb559831816b8b834a0a33a7612e75d2522bbf"
+    },
+    "analytical_table.tex": {
+      "bytes": 405,
+      "sha256": "16a4b46924c750dc7cea857c9e0ae2f0d0d706c9237922a79b79fe3daa943481"
+    },
+    "cases_table.tex": {
+      "bytes": 512,
+      "sha256": "ae4cf4f8e0aabe4ada500722aa0c630dfd33b8bcf0b5a9e580e906ef4d42b638"
+    },
+    "household_closure.tex": {
+      "bytes": 164,
+      "sha256": "0578a75cb14bf5b149444a0acea21edf73f1ac4ec2da9485511d72715520beac"
+    },
+    "optimization_table.tex": {
+      "bytes": 282,
+      "sha256": "77f308f284a5e2f948cbfaa88090011d3b0c326ae85862fdb22ecb5ce9a3748e"
+    },
+    "parameters_table.tex": {
+      "bytes": 1827,
+      "sha256": "5a8f0c92aa5b5cfa133b57d6fc42e2fb79e484282ca2a3fa3d6ef8cd4eded007"
+    }
+  },
+  "presentation": {
+    "accounting_residual": "scientific_2",
+    "analytical": 3,
+    "cases": {
+      "O_1": 2,
+      "delta_D0_dir": 1,
+      "m_H": 2,
+      "phi": 2
+    },
+    "household_closure": "effective_run_configuration",
+    "optimization": 3,
+    "parameters": 3
+  },
+  "rule": "Displayed results are formatted from unrounded CSV fields; baseline closure values are derived from the verified run configuration.",
+  "schema_version": 1,
+  "sources": {
+    "accounting_checks.csv": "aed14e687aa7ae07be26e52a6614d0c4f85d2b5fba4e55e66f9067db071f367a",
+    "analytical_conditions.csv": "1e9c2c3afec38f58f877b0f330d1821f83b3cc5db6d0e6a440b504b53257f59c",
+    "constructive_case.csv": "e1287937acc82173a4986499157e4a26bcc25ba3255a0adcb57e250e727d68e7",
+    "constructive_case_accounting_checks.csv": "ae9a00600c44f642c4435d1530da6d6126b8ca9a16514d42d54c0ba0b08299fb",
+    "inputs/config/benchmark.json": "7756c61f495da1688f23b72816989d9d55a61b882eb7eed60e0f2ea94533996d",
+    "optimization_summary.csv": "0716e36dbb558e84f12b30a924498dbad775d1ca4814d335efc8ee08ef098450",
+    "parameters.csv": "44c7b0ab91713695607d557109f2c1a380558af503456bfbba3bf9ebbaa92865",
+    "scenarios.csv": "38ce20beecba943bd536b22f5f72ca81ea1f433a15531836f15125092cbdc59d"
+  },
+  "status": "passed"
+}
