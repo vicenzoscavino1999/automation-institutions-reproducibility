@@ -1,6 +1,6 @@
 {
   "software_version": "0.1.2",
-  "public_repository": "private_staging",
+  "public_repository": "https://github.com/vicenzoscavino1999/automation-institutions-reproducibility",
   "remote_ci": {
     "status": "passed",
     "run_url": "https://github.com/vicenzoscavino1999/automation-institutions-reproducibility/actions/runs/34628907431",
@@ -9,11 +9,13 @@
     "source_tree_sha256": "8a6b602c97ce5992727bbd7906227c1e7a779b322be280d47db5946554bc1b55"
   },
   "zenodo": {
-    "state": "unpublished_draft",
-    "reserved_doi": "10.5281/zenodo.22712835",
-    "record_id": "22712835"
+    "state": "published",
+    "doi": "10.5281/zenodo.22712835",
+    "record_id": "22712835",
+    "record_url": "https://zenodo.org/records/22712835",
+    "files_verified": 15
   },
-  "doi_registered": false,
+  "doi_registered": true,
   "license": {
     "software": "MIT",
     "documentation_and_results": "CC-BY-4.0",
@@ -21,5 +23,6 @@
     "full_book": "excluded; rights reserved",
     "author_approval_date": "2026-09-11"
   },
-  "zip_sha256": "78c749cbfcbb05b65e3335ac1ea27e201859992dacb9f0f5a2de348f2c5aff33"
+  "zip_sha256": "78c749cbfcbb05b65e3335ac1ea27e201859992dacb9f0f5a2de348f2c5aff33",
+  "publication_date": "2026-09-11"
 }
