@@ -108,13 +108,14 @@ jobs:
       - name: Run calculation and document build without a network
         run: |
           mkdir -p build
-          docker run --rm --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -v "$PWD/build:/artifacts" book-repro-runtime:0.1.2-ci python -m book_repro reproduce --output /artifacts/ci-docker-run
-          docker run --rm --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -v "$PWD/build:/artifacts" book-repro-runtime:0.1.2-ci python -m book_repro verify --run /artifacts/ci-docker-run
-          docker run --rm --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -v "$PWD/build:/artifacts" book-repro-docs:0.1.2-ci python -m book_repro build-docs --run /artifacts/ci-docker-run --output /artifacts/ci-docker-docs
-          docker run --rm --network none -v "$PWD/build:/artifacts" book-repro-docs:0.1.2-ci pdfinfo /artifacts/ci-docker-docs/example_EN.pdf
+          docker run --rm --platform linux/amd64 --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -e BOOK_REPRO_ROOT=/work -e PYTHONPATH=/work/src -v "$PWD:/work" book-repro-runtime:0.1.2-ci python -m book_repro reproduce --output /work/build/ci-docker-run
+          docker run --rm --platform linux/amd64 --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -e BOOK_REPRO_ROOT=/work -e PYTHONPATH=/work/src -v "$PWD:/work" book-repro-runtime:0.1.2-ci python -m book_repro verify --run /work/build/ci-docker-run
+          docker run --rm --platform linux/amd64 --network none -e BOOK_REPRO_OFFLINE=1 -e BOOK_REPRO_CONTAINER_NETWORK=none -e BOOK_REPRO_ROOT=/work -e PYTHONPATH=/work/src -v "$PWD:/work" book-repro-docs:0.1.2-ci python -m book_repro build-docs --run /work/build/ci-docker-run --output /work/build/ci-docker-docs
+          docker run --rm --platform linux/amd64 --network none -v "$PWD:/work" book-repro-docs:0.1.2-ci pdfinfo /work/build/ci-docker-docs/example_EN.pdf
       - name: Manuscript correspondence status
         run: echo "check-book not_run - the protected manuscript is intentionally absent from CI"
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: docker-reproduction-and-document
           path: |
