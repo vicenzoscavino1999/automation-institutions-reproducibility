@@ -14,6 +14,12 @@
     "record_id": "22712835"
   },
   "doi_registered": false,
-  "license": "existing_rights_reserved; author_decision_pending",
+  "license": {
+    "software": "MIT",
+    "documentation_and_results": "CC-BY-4.0",
+    "scope_file": "LICENSE_SCOPE.md",
+    "full_book": "excluded; rights reserved",
+    "author_approval_date": "2026-09-11"
+  },
   "zip_sha256": "78c749cbfcbb05b65e3335ac1ea27e201859992dacb9f0f5a2de348f2c5aff33"
 }

@@ -11,3 +11,10 @@ version: 0.1.2
 abstract: >-
   Code, synthetic inputs, exact finite checks and documentation for the
   two-date reduced-economy example accompanying manuscript v22.
+doi: "10.5281/zenodo.22712835"
+date-released: 2026-09-11
+repository-code: "https://github.com/vicenzoscavino1999/automation-institutions-reproducibility"
+url: "https://doi.org/10.5281/zenodo.22712835"
+license:
+  - MIT
+  - CC-BY-4.0

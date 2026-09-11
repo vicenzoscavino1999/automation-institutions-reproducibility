@@ -2,11 +2,11 @@
 
 Reproducibility package **0.1.2** by **Vicenzo Scavino Alfaro**, Independent Researcher, Lima, Peru.
 
-This package implements a synthetic two-date economy connecting automation, household income incidence, fiscal allocation, first-round direct demand, institutional capacity and future opportunity. Cases Aâ€“E, conditional frontiers, allocation bounds and sensitivity calculations make these connections explicit and reproducible.
+This package implements a synthetic two-date economy connecting automation, household income incidence, fiscal allocation, first-round direct demand, institutional capacity and future opportunity. Cases AÃ¢â‚¬â€œE, conditional frontiers, allocation bounds and sensitivity calculations make these connections explicit and reproducible.
 
 ## Reproduce the example
 
-The versioned release provides the exact ZIP, the standalone example PDF, checksums and environment inventories. The Zenodo archival deposit also supplies the Linux AMD64 Docker image bundle. Download the release assets into one directory and follow **RECEIVER_GUIDE_ES.md**. The ZIP is the canonical offline distribution.
+[GitHub release v0.1.2](https://github.com/vicenzoscavino1999/automation-institutions-reproducibility/releases/tag/v0.1.2) provides the exact ZIP, the standalone example PDF, checksums and environment inventories. The [Zenodo archival deposit](https://doi.org/10.5281/zenodo.22712835) also supplies the Linux AMD64 Docker image bundle. Download the release assets into one directory and follow **RECEIVER_GUIDE_ES.md**. The ZIP is the canonical offline distribution.
 
 For a source checkout, the complete, unchanged ZIP payload is in **package/**. Run commands from that directory. See [the receiver guide](package/RECEIVER_GUIDE_ES.md), [the detailed procedure](package/docs/REPRODUCTION_ES.md) and [the package README](package/README.md). The Docker bundle is a separate release asset.
 
@@ -14,14 +14,14 @@ Requirements are Windows AMD64 with CPython 3.12, or Docker capable of Linux AMD
 
 ## What is reproduced
 
-- Five scenarios Aâ€“E, household and public accounts, and both demand and opportunity conditions.
+- Five scenarios AÃ¢â‚¬â€œE, household and public accounts, and both demand and opportunity conditions.
 - Analytical thresholds, conditional regions, finite allocation bounds and parameter sensitivities.
 - A standalone ten-page example with generated tables and figures.
 - 350 accounting and domain checks and 14 groups of exact finite checks.
 
-Local verification passed 91 tests on Windows and 90 tests with one expected Windows-only omission on Linux. Scientific Windowsâ€“Linux comparisons passed 25/25 checks. Remote continuous integration also passed Windows, Linux, cross-platform comparison and Docker document construction. See [publication status](PUBLICATION_STATUS.json) for the tested commit and archival publication status.
+Local verification passed 91 tests on Windows and 90 tests with one expected Windows-only omission on Linux. Scientific WindowsÃ¢â‚¬â€œLinux comparisons passed 25/25 checks. Remote continuous integration also passed Windows, Linux, cross-platform comparison and Docker document construction. See [publication status](PUBLICATION_STATUS.json) for the tested commit and archival publication status.
 
-The application uses synthetic parameters. It reproduces the reduced example accompanying manuscript v22; it does not solve the complete HANKâ€“New Keynesian equilibrium or provide country calibration. The formal-results registry distinguishes 69 located supports from 13 supports pending location. Existing-layer Docker loading was tested; recovery from an empty Docker store was not established.
+The application uses synthetic parameters. It reproduces the reduced example accompanying manuscript v22; it does not solve the complete HANKÃ¢â‚¬â€œNew Keynesian equilibrium or provide country calibration. The formal-results registry distinguishes 69 located supports from 13 supports pending location. Existing-layer Docker loading was tested; recovery from an empty Docker store was not established.
 
 ## Manuscript, citation and rights
 
@@ -29,4 +29,4 @@ The accompanying manuscript is *Automation, Institutions, and Economic Freedom: 
 
 [CITATION.cff](CITATION.cff) identifies the software. Please also acknowledge the accompanying manuscript when discussing its theoretical framework. [AI assistance](package/docs/AI_ASSISTANCE.md) and [third-party notices](package/THIRD_PARTY_NOTICES.md) are included.
 
-The files inside **package/** are the frozen 0.1.2 payload, including the historical local-publication status recorded at packaging. The current repository and archive status is recorded separately in **PUBLICATION_STATUS.json**, preserving all original checksums. Rights currently remain as stated in [RIGHTS.md](RIGHTS.md).
+The files inside **package/** are the frozen 0.1.2 payload, including the historical local-publication status recorded at packaging. The current repository and archive status is recorded separately in **PUBLICATION_STATUS.json**, preserving all original checksums. Original software is available under MIT, and original documentation and distributed results under CC BY 4.0, as specified in [LICENSE_SCOPE.md](LICENSE_SCOPE.md). The complete book is excluded.
