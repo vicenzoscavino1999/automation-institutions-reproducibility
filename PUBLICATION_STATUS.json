@@ -1,7 +1,13 @@
 {
   "software_version": "0.1.2",
-  "public_repository": "not_published",
-  "remote_ci": "not_run",
+  "public_repository": "private_staging",
+  "remote_ci": {
+    "status": "passed",
+    "run_url": "https://github.com/vicenzoscavino1999/automation-institutions-reproducibility/actions/runs/34628907431",
+    "tested_commit": "50e621dd9dbe91baec4a2d61fcd6d36407e216cb",
+    "jobs_passed": 4,
+    "source_tree_sha256": "8a6b602c97ce5992727bbd7906227c1e7a779b322be280d47db5946554bc1b55"
+  },
   "zenodo": {
     "state": "unpublished_draft",
     "reserved_doi": "10.5281/zenodo.22712835",
